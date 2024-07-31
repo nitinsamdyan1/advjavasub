@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.HBox?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nasaapi.ApiController"
+      prefHeight="600.0" prefWidth="800.0" spacing="15" styleClass="root">
+    <HBox spacing="10" alignment="center" styleClass="hbox">
+        <TextField fx:id="searchField" promptText="Enter search term" HBox.hgrow="ALWAYS" styleClass="text-field"/>
+        <Button fx:id="searchButton" text="Search" styleClass="button"/>
+    </HBox>
+    <Label fx:id="statusLabel" text="Status: Ready" styleClass="label"/>
+    <VBox fx:id="imageContainer" spacing="10" alignment="center" styleClass="image-container" style="-fx-padding: 10;">
+        <ImageView fx:id="imageView" fitWidth="600" fitHeight="400" preserveRatio="true" styleClass="image-view"/>
+        <Label fx:id="summaryLabel" text="Summary: " wrapText="true" VBox.vgrow="ALWAYS" styleClass="label"/>
+        <Button fx:id="moreDetailsButton" text="Get More Details" styleClass="button"/>
+    </VBox>
+</VBox>
